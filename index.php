@@ -14,15 +14,153 @@ ob_start();
     <title>Social Network</title>
     <link rel="stylesheet" type="text/css" href="resources/css/main.css">
     <style>
-        .container{
-            margin: 40px auto;
-            width: 400px;
-        }
-        .content {
-            padding: 30px;
-            background-color: white;
-            box-shadow: 0 0 5px #4267b2;
-        }
+        * {
+  padding: 0;
+  margin: 0;
+  color: #1a1f36;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Ubuntu, sans-serif;
+}
+
+body {
+  min-height: 100%;
+  background-color: #ffffff;
+}
+
+h1 {
+  letter-spacing: -1px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 28px;
+  color: #4267b2;
+}
+
+a {
+  color: #5469d4;
+  text-decoration: unset;
+}
+
+.container {
+  margin: 40px auto;
+  width: 400px;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tablink {
+  padding: 10px 20px;
+  background-color: #e3e8ee;
+  color: #5469d4;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tablink.active {
+  background-color: #5469d4;
+  color: #ffffff;
+}
+
+.content {
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #4267b2;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+span {
+  color: #ff4d4f;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 16px;
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #e3e8ee;
+  border-radius: 4px;
+  margin-top: 5px;
+  outline-color: rgb(84 105 212 / 0.5);
+  box-shadow: rgba(60, 66, 87, 0.16) 0px 1px 3px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #5469d4;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 4px;
+  box-shadow: rgba(84, 105, 212, 0.5) 0px 2px 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.required {
+  font-size: 12px;
+  color: #ff4d4f;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px 16px;
+  min-height: 120px;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 16px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e3e8ee;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
+
     </style>
 </head>
 <body>

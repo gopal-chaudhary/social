@@ -166,12 +166,82 @@ span {
 
 /* Post */
 
-.post .public {
-    float: right;
-    text-align: center;
-    width: auto;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
+.post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.public {
+    font-weight: bold;
+    color: #28a745; /* Green color for public posts */
+}
+
+.private {
+    font-weight: bold;
+    color: #e74c3c; /* Red color for private posts */
+}
+
+.postedtime {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profilelink {
+    font-weight: bold;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.profilelink:hover {
+    color: #2980b9;
+}
+
+.caption {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.post-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.like-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.like-button:hover {
+    background-color: #2980b9;
+}
 
 /*============== HEADINGS AND LINKS ============*/
 
