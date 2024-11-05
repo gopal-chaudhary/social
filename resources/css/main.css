@@ -51,82 +51,110 @@ span {
 
 /*============== NAVBAR SETTINGS ============*/
 
-.usernav {
-    background-color: #4267b2;
-    overflow: auto;
-}
 
-.usernav ul {
-    float: right;
+* {
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
 }
+body {
+    background: #1E1F25;
+    color: #ebebeb;
+    font-family: Arial, sans-serif;
+}
+.usernav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    width: 100%;
+    /* padding: 1rem 0; */
+    background: #2b2c31;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* position: relative; */
+}
+.usernav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
+    width: 50%;
+    /* gap : 1; */
+    /* max-width: 1000px; */
+}
 .usernav ul li {
-    display: inline;
+  
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* padding: 0.75rem 1.5rem; */
+    /* font-weight: bold; */
+    font-size: small;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
-
 .usernav ul li a {
-    display: inline-block;
-    color: white;
-    padding: 8px 16px;
+    padding:  2rem 0.5rem;
+    color: #ebebeb;
+    text-decoration: none;
 }
-
-.usernav ul li a:hover {
-    background-color: #23385f;
+.usernav ul li:hover {
+    background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+    background-size: 100% 100%;
+    color: #27262c;
+    text-shadow: 0 -1px 0 #ef816c;
+    animation: spring 300ms ease-out;
 }
-
-
-/* Search */
-
-.usernav .globalsearch {
-    margin: 0;
-    width: 60%;
-    background-color: #4267b2;
+.usernav ul li:active {
+    transform: translateY(4px);
 }
-
-.usernav .globalsearch input[type=text] {
+.globalsearch {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    background: #2b2c31;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   
+}
+.globalsearch form {
+    display: flex;
+    align-items: center;
+}
+.globalsearch select,
+.globalsearch input[type="text"] {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #ebebeb;
+}
+.globalsearch input[type="text"]::placeholder {
+    color: #999;
+}
+.globalsearch input[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #27262c;
+    background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+    background-size: 100% 100%;
+    cursor: pointer;
     border: none;
-    width: auto;
-    padding: 2px 6px;
+    transition: transform 0.2s ease;
+}
+.globalsearch input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+.globalsearch input[type="submit"]:active {
+    transform: translateY(2px);
 }
 
-.usernav .globalsearch input[type=submit] {
-    background-color: #e9ebee;
-    color: #23385f;
-    border: none;
-    margin: 5px 5px 5px 0;
-    padding: 2px 6px;
-    width: auto;
-}
-
-.usernav .globalsearch input[type=submit]:hover {
-    background-color: #23385f;
-    color: white;
-}
-
-.usernav .globalsearch select {
-    font-family: Fontin;
-    font-size: 18px;
-    margin-left: 5px;
-    padding: 0.9px 0px;
-    vertical-align: -1px;
-}
-
-
-/*============== POSTS SETTINGS ============*/
-
-
-/* General Layout of Post */
-
-.post,
-.createpost {
-    background-color: white;
-    box-shadow: 0 0 5px #4267b2;
-    margin: auto;
-    width: 650px;
-    padding: 10px 16px;
-    overflow: auto;
+@keyframes spring {
+    15% { transform: scale(1.2, 1.1); }
+    40% { transform: scale(0.95, 0.95); }
+    75% { transform: scale(1.05, 1); }
+    100% { transform: scale(1, 1); }
 }
 
 
@@ -221,6 +249,7 @@ body {
 .caption {
     font-size: 1.2em;
     margin: 10px 0;
+    color: #333333d5;
 }
 
 .post-image {
@@ -391,3 +420,4 @@ input:disabled {
 #special:hover {
     background-color: #4267b2;
 }
+

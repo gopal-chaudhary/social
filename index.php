@@ -164,7 +164,9 @@ h2 {
     </style>
 </head>
 <body>
-    <h1>Welcome to Pynch</h1>
+
+
+    <h1>Welcome to Socail</h1>
     <div class="container">
         <div class="tab">
             <button class="tablink active" onclick="openTab(event,'signin')" id="link1">Login</button>
@@ -359,3 +361,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // A form is posted
     }
 }
 ?>
+
